@@ -1,48 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+
 /* fontfamily */
-body{
-    font-family: 'Poppins', sans-serif; 
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: royalblue;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+
+
+}
+
+.container {
+    width: 1164px;
    
 }
-.container{
-    width: 1164px;
+
+.collection {
+    text-align: center;
+    font-size: 36px;
+
 }
-.top-section{
+
+.top-section {
     display: flex;
-    background-color: rgb(241, 220, 224);
+    background-color: rgb(240, 224, 227);
     justify-content: center;
     padding-bottom: 86px;
-    
-    
+
+
 }
-.banner-container{
+
+.banner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-left: 30px;
 }
-.banner-image img{
-    width: 640px;
-    height: 414;
+
+.banner-image img {
+    width: 440px;
+    height: 440px;
 
 }
-.banner-title{
+
+.banner-title {
     width: 487;
     margin-left: 20px;
-    
+
 }
-.banner-title h1{
+
+.banner-title h1 {
     font-size: 36px;
     font-style: normal;
     line-height: 40px;
     color: #030202;
     padding-bottom: 20px;
 }
-.btn-hero{
+
+.btn-hero {
     background-color: #E02C6D;
     color: #FFFFFF;
     font-size: 16px;
@@ -51,4 +71,177 @@ body{
     padding: 10px 24px;
     border-radius: 5px;
     display: inline-block;
-    transition:background-color 0.5s;}
+    transition: background-color 0.5s;
+
+}
+
+
+.see {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.products-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    background: #FFFFFF;
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-left: 10px;
+}
+
+.product {
+    padding: 15px;
+    box-shadow: 10px 10px 30px rgb(218, 219, 219);
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    margin-top: 16px;
+    color: #18191f;
+}
+
+.product {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+    color: #6c6c6c;
+}
+
+.fa-star {
+    color: blue;
+}
+
+.fa-star-half-alt {
+    color: blue;
+}
+
+.product img {
+    width: 300px;
+    height: 256px;
+}
+
+
+/* Nav Css from w3 school */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+.blog-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.blogs{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 44px 0;
+}
+.blogs button{
+    border: 2px solid purple;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px 25px;
+    font-weight: 600;
+    font-size: 18px;
+    color: purple;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.blogs button:hover{
+    background-color: purple;
+    color: white;
+}
+.blog{
+    border: 1px solid rgb(207, 207, 207);
+    padding: 12px;
+}
+.blogs img{
+    width: 100%;
+}
+footer{
+    background-color: #18191f;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    color: #fff;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer.social-icon{
+    margin: 20px 0px;
+}
+footer p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 15px;
+
+}
+.social-icon a{
+    color: #9cace2;
+    padding: 14px 14px;
+    border-radius: 40px;
+    margin-left: 14px;
+    background: rgb(15,14,14);
+    transition: 0.5s;
+}
+/* media query */
+/* mob */
+@media only screen and (max-width: 688px) {
+    .products, .blogs {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .top-section{
+        display: inline;
+    }
+  }
+  /* tab */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .products, .blogs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
